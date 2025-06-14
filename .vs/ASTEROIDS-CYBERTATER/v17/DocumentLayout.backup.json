@@ -9,10 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|h:\\src\\godot projects\\asteroids-cybertater\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|h:\\src\\godot projects\\asteroids-cybertater\\assets\\scripts\\newscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|solutionrelative:assets\\scripts\\newscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,22 +17,9 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 289,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ScreenBoundsMvmnt.cs",
-              "DocumentMoniker": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\ScreenBoundsMvmnt.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ScreenBoundsMvmnt.cs",
-              "ToolTip": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\ScreenBoundsMvmnt.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ScreenBoundsMvmnt.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T14:44:09.377Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
@@ -46,21 +29,25 @@
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NewScript.cs",
-              "DocumentMoniker": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\NewScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NewScript.cs",
-              "ToolTip": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\NewScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NewScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T12:54:14.614Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ScreenBoundsMvmnt.cs",
+              "DocumentMoniker": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\ScreenBoundsMvmnt.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScreenBoundsMvmnt.cs",
+              "ToolTip": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\ScreenBoundsMvmnt.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScreenBoundsMvmnt.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T14:44:09.377Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -70,7 +57,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
               "ToolTip": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-14T12:29:40.048Z",
               "EditorCaption": ""

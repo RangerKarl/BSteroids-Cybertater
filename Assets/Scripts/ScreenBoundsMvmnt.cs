@@ -10,8 +10,8 @@ public partial class ScreenBoundsMvmnt : Node
 {
 	[Export]
 	Node2D node;
-
-    BoundsStruct bounds;
+	[Export]
+	float[] bounds = new float[4];
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -25,10 +25,10 @@ public partial class ScreenBoundsMvmnt : Node
 		var cameraPosition = camera.Position;
 		var size = rect.Size / zoom;
 
-		bounds.top		= (cameraPosition.Y - size.Y) / 2;
-        bounds.bottom	= (cameraPosition.Y + size.Y) / 2;
-		bounds.left		= (cameraPosition.X - size.X) / 2;
-		bounds.right	= (cameraPosition.X + size.X) / 2;
+		bounds[(int)Directions.Top]		= (cameraPosition.Y - size.Y) / 2;
+        bounds[(int)Directions.Bottom]	= (cameraPosition.Y + size.Y) / 2;
+		bounds[(int)Directions.Left]	= (cameraPosition.X - size.X) / 2;
+		bounds[(int)Directions.Right]	= (cameraPosition.X + size.X) / 2;
 
     }
 
@@ -37,18 +37,24 @@ public partial class ScreenBoundsMvmnt : Node
 	{
 		var globalPosit = node.GlobalPosition;
 		
-		if (globalPosit.Y > bounds.bottom)
-            globalPosit.Y = bounds.top;
-		else if (globalPosit.Y <= bounds.top)
-			globalPosit.Y = bounds.bottom;
+		// float variability bites us again
+		if (globalPosit.Y >= bounds[(int)Directions.Bottom])
+            globalPosit.Y = bounds[(int)Directions.Top];
+		else if (globalPosit.Y <= bounds[(int)Directions.Top])
+			globalPosit.Y = bounds[(int)Directions.Bottom];
 
-		if (globalPosit.X < bounds.left)
-			globalPosit.X = bounds.right;
-		else if (globalPosit.X >= bounds.right)
-			globalPosit.X = bounds.left;
+		if (globalPosit.X < bounds[(int)Directions.Left])
+			globalPosit.X = bounds[(int)Directions.Right];
+		else if (globalPosit.X >= bounds[(int)Directions.Right])
+			globalPosit.X = bounds[(int)Directions.Left];
 
 		node.GlobalPosition = globalPosit;
 	}
+}
+
+enum Directions
+{
+	Top = 0, Bottom, Left, Right
 }
 
 struct BoundsStruct

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://juoy7p4lpfrp"]
 
 [ext_resource type="Texture2D" uid="uid://bcfbgdggw01cc" path="res://Assets/Textures/Player.png" id="1_53spr"]
-[ext_resource type="Script" path="res://Assets/Scripts/PlayerMovement.cs" id="1_clmic"]
+[ext_resource type="Script" uid="uid://dsb51pxv2xmib" path="res://Assets/Scripts/PlayerMovement.cs" id="1_clmic"]
 [ext_resource type="PackedScene" uid="uid://cipurhnfsh5jt" path="res://Scenes/screen_bounds_mvmnt.tscn" id="3_8jkra"]
 
 [node name="Player" type="CharacterBody2D"]

@@ -1,0 +1,17 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1749903893
+icon.svg::CompressedTexture2D::5305773312880069426::1749903425::1749903432::1::::<><>::
+::res://Assets/::1749903501
+::res://Assets/Textures/::1749903562
+Asteroid_01.png::CompressedTexture2D::353365342598449572::1683229158::1749903562::1::::<><>::
+Asteroid_02.png::CompressedTexture2D::3684083879783726184::1683229158::1749903562::1::::<><>::
+Asteroid_03.png::CompressedTexture2D::4002621827854728398::1683229158::1749903562::1::::<><>::
+Asteroid_04.png::CompressedTexture2D::6707782871516630483::1683229158::1749903562::1::::<><>::
+EngineThrottle.png::CompressedTexture2D::5204848941563259765::1683229158::1749903562::1::::<><>::
+Lives.png::CompressedTexture2D::5863732004123535160::1683229158::1749903562::1::::<><>::
+Player.png::CompressedTexture2D::2537191858637562134::1683229158::1749903562::1::::<><>::
+Square.png::CompressedTexture2D::2466280588340190577::1683229158::1749903562::1::::<><>::
+ufo.png::CompressedTexture2D::3603664014122596278::1683229158::1749903562::1::::<><>::
+::res://Scenes/::1749904080
+main.tscn::PackedScene::8978026009178514088::1749903734::0::1::::<><>::
+player.tscn::PackedScene::673881750028128749::1749904080::0::1::::<><>::uid://bcfbgdggw01cc::::res://Assets/Textures/Player.png

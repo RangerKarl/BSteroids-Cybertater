@@ -1,0 +1,5 @@
+res://Scenes/main.tscn
+res://Scenes/player.tscn
+res://Scenes/screen_bounds_mvmnt.tscn
+res://Assets/Scripts/PlayerMovement.cs
+res://Assets/Scripts/ScreenBoundsMvmnt.cs
