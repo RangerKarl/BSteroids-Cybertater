@@ -1,6 +1,4 @@
 using Godot;
-using Godot.Collections;
-using System;
 
 /// <summary>
 /// This class defines the boundaries of the game space. All objects should respect this boundary 
@@ -10,7 +8,7 @@ public partial class ScreenBoundsMvmnt : Node
 {
 	[Export]
 	Node2D node;
-	[Export]
+
 	float[] bounds = new float[4];
 
 	// Called when the node enters the scene tree for the first time.
@@ -50,15 +48,4 @@ public partial class ScreenBoundsMvmnt : Node
 
 		node.GlobalPosition = globalPosit;
 	}
-}
-
-enum Directions
-{
-	Top = 0, Bottom, Left, Right
-}
-
-struct BoundsStruct
-{
-	[Export]
-	public float top, bottom, left, right;
 }

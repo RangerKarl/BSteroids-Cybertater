@@ -3,3 +3,7 @@ res://Scenes/player.tscn
 res://Scenes/screen_bounds_mvmnt.tscn
 res://Assets/Scripts/PlayerMovement.cs
 res://Assets/Scripts/ScreenBoundsMvmnt.cs
+res://Assets/Scripts/AsteroidSpawner.cs
+res://Scenes/asteroid_1.tscn
+res://Assets/Scripts/Asteroid.cs
+res://Scenes/asteroid_spawner.tscn
