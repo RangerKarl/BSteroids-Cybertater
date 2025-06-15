@@ -8,6 +8,8 @@
 radius = 64.0
 
 [node name="Asteroid" type="Area2D"]
+collision_layer = 4
+collision_mask = 27
 script = ExtResource("1_v8xjk")
 imagePaths = PackedStringArray("res://Assets/Textures/Asteroid_01.png", "res://Assets/Textures/Asteroid_02.png", "res://Assets/Textures/Asteroid_03.png", "res://Assets/Textures/Asteroid_04.png")
 
@@ -19,3 +21,5 @@ shape = SubResource("CircleShape2D_tqh6u")
 
 [node name="ScreenBoundsMovement" parent="." node_paths=PackedStringArray("node") instance=ExtResource("2_tqh6u")]
 node = NodePath("..")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

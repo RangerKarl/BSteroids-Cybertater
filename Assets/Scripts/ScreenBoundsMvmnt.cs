@@ -39,17 +39,40 @@ namespace BSteroids.Scripts.Game
             var globalPosit = node.GlobalPosition;
 
             // float variability bites us again
+            // don't swap unless we have to. No need to spend the swaptime
             if (globalPosit.Y >= bounds[(int)Directions.Bottom])
-                globalPosit.Y = bounds[(int)Directions.Top];
+            {
+                SwapPositions(globalPosit, Directions.Top);
+            }
             else if (globalPosit.Y <= bounds[(int)Directions.Top])
-                globalPosit.Y = bounds[(int)Directions.Bottom];
+            {
+                SwapPositions(globalPosit, Directions.Bottom);
+            }
 
-            if (globalPosit.X < bounds[(int)Directions.Left])
-                globalPosit.X = bounds[(int)Directions.Right];
+            if (globalPosit.X <= bounds[(int)Directions.Left])
+            {
+                SwapPositions(globalPosit, Directions.Right);
+
+            }
             else if (globalPosit.X >= bounds[(int)Directions.Right])
-                globalPosit.X = bounds[(int)Directions.Left];
+            {
+                SwapPositions(globalPosit, Directions.Left);
+            }
+        }
 
-            node.GlobalPosition = globalPosit;
+        private void SwapPositions(Vector2 globalPosit, Directions dir)
+        {
+            if (dir  == Directions.Bottom || dir == Directions.Top)
+            {
+                globalPosit.Y = bounds[(int)dir];
+                node.GlobalPosition = globalPosit;
+            }
+            else if (dir == Directions.Left || dir == Directions.Right)
+            {
+                globalPosit.X = bounds[(int)dir];
+                node.GlobalPosition = globalPosit;
+            }
+            
         }
     }
 

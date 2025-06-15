@@ -21,17 +21,18 @@ namespace BSteroids.Scripts.Game
             {
                 // get random spawn pos
                 var randomSpawnPosition = GetRandomPositionFromScreenRect();
-                SpawnAsteroid(randomSpawnPosition);
+                SpawnAsteroid(AsteroidSizes.BIG, randomSpawnPosition);
             }
         }
 
-        private void SpawnAsteroid(Vector2 position)
+        private void SpawnAsteroid(AsteroidSizes size, Vector2 position)
         {
             var asteroid = (Asteroid)AsteroidScene.Instantiate();
             // kind of an awkward way to defer a call, reference
             // https://docs.godotengine.org/en/stable/tutorials/scripting/c_sharp/c_sharp_basics.html#current-gotchas-and-known-issues
             GetTree().Root.CallDeferred(Node.MethodName.AddChild, asteroid);
             asteroid.GlobalPosition = position;
+            asteroid.Size = size;
         }
 
         private Vector2 GetRandomPositionFromScreenRect()
