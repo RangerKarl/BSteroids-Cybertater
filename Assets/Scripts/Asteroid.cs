@@ -1,4 +1,4 @@
-using Bsteroids.Scripts.Utilities;
+using BSteroids.Scripts.Utilities;
 using Godot;
 using System;
 
@@ -16,11 +16,15 @@ namespace BSteroids.Scripts.Game
 
         internal AsteroidSizes Size = AsteroidSizes.BIG;
         
-        Sprite2D sprite;
+        Sprite2D _sprite;
+
+        Explosion _explosion;
+
+        [Signal]
+        public delegate void OnAsteroidDestroyedEventHandler(AsteroidSizes NextSize, Vector2 position);
 
         public override void _Ready()
         {
-            GD.Print("Asteroid spawn");
             // scale value depend on size
 
             var scaleValue = 1 / ((int)Size + 1);
@@ -34,9 +38,15 @@ namespace BSteroids.Scripts.Game
 
             // update the Sprite2D with a random asset from the image paths
 
-            sprite = (Sprite2D)this.GetNode("./Sprite2D");
+            _sprite = this.GetNode<Sprite2D>("./Sprite2D");
             var img = (Texture2D)GD.Load(imagePaths[rnd.Next(0, imagePaths.Length -1)]);
-            sprite.Texture = img;
+            _sprite.Texture = img;
+
+            // attach explosion
+            // something wrong with getnode here, it's not picking up - turns out it was the scene name causing the route to fail. Make sure the naming is right from the get go!
+            _explosion = this.GetNode<Explosion>("Explosion");
+
+            GD.Print("Asteroid spawn");
 
         }
 
@@ -52,7 +62,30 @@ namespace BSteroids.Scripts.Game
             {
                 // nuke the player
                 node.QueueFree();
+                OnDestroy();
             }
+        }
+
+        private void EmitExplosion()
+        {
+            _explosion.Emitting = true;
+            _explosion.Reparent(GetTree().Root);
+        }
+
+        private void OnDestroy()
+        {
+            int NewAsteroidSize = (int)Size;
+
+            if (NewAsteroidSize != (int)AsteroidSizes.SMALL)
+                NewAsteroidSize -= 1;
+
+            // NewAsteroidSize needs to be converted down as a limited set of types are C# compatible. Enums, apparently, are not.
+            OnAsteroidDestroyed += (Size, Position) => { EmitSignal(SignalName.OnAsteroidDestroyed, NewAsteroidSize, Position); };
+
+            EmitExplosion();
+            QueueFree();
+
+
         }
 
     }

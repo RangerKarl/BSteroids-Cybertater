@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://du3gcn25xl7rh"]
+
+[ext_resource type="Script" uid="uid://8klec60cqnla" path="res://Assets/Scripts/Explosion.cs" id="1_fk6rd"]
+
+[node name="Explosion" type="CPUParticles2D"]
+emitting = false
+amount = 6
+lifetime = 6.0
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 128.57
+initial_velocity_max = 239.29
+angle_max = 180.0
+scale_amount_min = 3.0
+scale_amount_max = 3.0
+script = ExtResource("1_fk6rd")
+
+[node name="Timer" type="Timer" parent="."]
