@@ -1,14 +1,14 @@
 ﻿
-namespace Bsteroids.Scripts.Utilities
+namespace BSteroids.Scripts.Utilities
 {
 
-    enum Directions
+    public enum Directions
     {
         Top = 0, Bottom, Left, Right
     }
 
-    enum AsteroidSizes
+    public enum AsteroidSizes
     {
-        BIG, MEDIUM, SMALL
+        BIG = 3, MEDIUM = 2, SMALL = 1
     }
 }

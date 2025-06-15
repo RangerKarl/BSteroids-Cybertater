@@ -7,3 +7,6 @@ res://Assets/Scripts/Asteroid.cs
 res://Assets/Scripts/ScreenBoundsMvmnt.cs
 res://Assets/Scripts/AsteroidSpawner.cs
 res://Assets/Scripts/PlayerMovement.cs
+res://Assets/Scripts/Explosion.cs
+res://Scenes/explosions.tscn
+res://Scenes/explosion.tscn

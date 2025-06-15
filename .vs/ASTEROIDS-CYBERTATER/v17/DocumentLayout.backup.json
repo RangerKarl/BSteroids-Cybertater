@@ -3,16 +3,31 @@
   "WorkspaceRootPath": "H:\\src\\Godot Projects\\asteroids-cybertater\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|h:\\src\\godot projects\\asteroids-cybertater\\assets\\scripts\\screenboundsmvmnt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|solutionrelative:assets\\scripts\\screenboundsmvmnt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|h:\\src\\godot projects\\asteroids-cybertater\\assets\\scripts\\asteroidspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|solutionrelative:assets\\scripts\\asteroidspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|h:\\src\\godot projects\\asteroids-cybertater\\assets\\scripts\\asteroid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|solutionrelative:assets\\scripts\\asteroid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|h:\\src\\godot projects\\asteroids-cybertater\\assets\\scripts\\asteroidspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|solutionrelative:assets\\scripts\\asteroidspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|h:\\src\\godot projects\\asteroids-cybertater\\assets\\scripts\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|solutionrelative:assets\\scripts\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|h:\\src\\godot projects\\asteroids-cybertater\\assets\\scripts\\utilities\\structs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|solutionrelative:assets\\scripts\\utilities\\structs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\range\\AppData\\Local\\Temp\\.vsdbgsrc\\df73a4db74df89d59655c5fb6326406f47fbfa9af1fa81518fe0a07c49d34133\\Node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|h:\\src\\godot projects\\asteroids-cybertater\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|h:\\src\\godot projects\\asteroids-cybertater\\assets\\scripts\\screenboundsmvmnt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|solutionrelative:assets\\scripts\\screenboundsmvmnt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB0D920C-92CF-4B31-8367-6BEB0B8635C8}|Asteroids-CyberTater.csproj|h:\\src\\godot projects\\asteroids-cybertater\\assets\\scripts\\utilities\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +41,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 289,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,20 +53,70 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Structs.cs",
+              "DocumentMoniker": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\Utilities\\Structs.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Structs.cs",
+              "ToolTip": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\Utilities\\Structs.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\Structs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T15:09:53.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Node.cs",
+              "DocumentMoniker": "C:\\Users\\range\\AppData\\Local\\Temp\\.vsdbgsrc\\df73a4db74df89d59655c5fb6326406f47fbfa9af1fa81518fe0a07c49d34133\\Node.cs",
+              "ToolTip": "C:\\Users\\range\\AppData\\Local\\Temp\\.vsdbgsrc\\df73a4db74df89d59655c5fb6326406f47fbfa9af1fa81518fe0a07c49d34133\\Node.cs [Read Only]",
+              "ViewState": "AgIAAN0JAAAAAAAAAAAmwPEJAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T15:00:48.621Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Explosion.cs",
+              "DocumentMoniker": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\Explosion.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Explosion.cs",
+              "ToolTip": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\Explosion.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Explosion.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T14:31:41.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
+              "ToolTip": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T14:19:22.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ScreenBoundsMvmnt.cs",
               "DocumentMoniker": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\ScreenBoundsMvmnt.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ScreenBoundsMvmnt.cs",
               "ToolTip": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\ScreenBoundsMvmnt.cs",
               "RelativeToolTip": "Assets\\Scripts\\ScreenBoundsMvmnt.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAgwC8AAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAgwCkAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-15T14:19:22.276Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Class1.cs",
               "DocumentMoniker": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\Utilities\\Class1.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Class1.cs",
@@ -70,20 +135,20 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Asteroid.cs",
               "ToolTip": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\Asteroid.cs",
               "RelativeToolTip": "Assets\\Scripts\\Asteroid.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwDcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAgwFMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-15T13:43:43.671Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AsteroidSpawner.cs",
               "DocumentMoniker": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\AsteroidSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\AsteroidSpawner.cs",
               "ToolTip": "H:\\src\\Godot Projects\\asteroids-cybertater\\Assets\\Scripts\\AsteroidSpawner.cs",
               "RelativeToolTip": "Assets\\Scripts\\AsteroidSpawner.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCIAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wCUAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-15T13:42:35.098Z",
               "EditorCaption": ""

@@ -1,6 +1,6 @@
 using Godot;
 using System;
-using Bsteroids.Scripts.Utilities;
+using BSteroids.Scripts.Utilities;
 
 namespace BSteroids.Scripts.Game
 {
@@ -33,7 +33,16 @@ namespace BSteroids.Scripts.Game
             GetTree().Root.CallDeferred(Node.MethodName.AddChild, asteroid);
             asteroid.GlobalPosition = position;
             asteroid.Size = size;
+
+            // attach on asteroid spawn, the OnDestroyEvent on Asteroid
+            asteroid.OnAsteroidDestroyed += AsteroidDestroyed;
         }
+
+        private void AsteroidDestroyed(AsteroidSizes NextSize, Vector2 position)
+        {
+            GD.Print("AAAA");
+        }
+
 
         private Vector2 GetRandomPositionFromScreenRect()
         {
