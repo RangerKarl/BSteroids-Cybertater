@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://v77matj4youd"]
+
+[ext_resource type="Script" uid="uid://50x5j6u2240k" path="res://Assets/Scripts/Asteroid.cs" id="1_bi0dy"]
+[ext_resource type="PackedScene" uid="uid://cipurhnfsh5jt" path="res://Scenes/screen_bounds_mvmnt.tscn" id="2_rfhhd"]
+[ext_resource type="PackedScene" uid="uid://du3gcn25xl7rh" path="res://Scenes/explosion.tscn" id="3_f2ils"]
+[ext_resource type="Texture2D" uid="uid://fbf41fhnpppc" path="res://Assets/Textures/Asteroid_01.png" id="4_xliy4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tqh6u"]
+radius = 64.0
+
+[node name="Asteroid" type="Area2D"]
+collision_layer = 4
+collision_mask = 27
+script = ExtResource("1_bi0dy")
+imagePaths = PackedStringArray("res://Assets/Textures/Asteroid_01.png", "res://Assets/Textures/Asteroid_02.png", "res://Assets/Textures/Asteroid_03.png", "res://Assets/Textures/Asteroid_04.png")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tqh6u")
+
+[node name="ScreenBoundsMovement" parent="." node_paths=PackedStringArray("node") instance=ExtResource("2_rfhhd")]
+node = NodePath("..")
+
+[node name="Explosion" parent="." instance=ExtResource("3_f2ils")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("4_xliy4")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

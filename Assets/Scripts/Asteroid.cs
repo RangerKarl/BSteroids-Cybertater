@@ -1,4 +1,4 @@
-using Bsteroids.Scripts.Utilities;
+using BSteroids.Scripts.Utilities;
 using Godot;
 using System;
 

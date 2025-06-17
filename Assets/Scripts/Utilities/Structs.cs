@@ -1,5 +1,5 @@
 ﻿
-namespace Bsteroids.Scripts.Utilities
+namespace BSteroids.Scripts.Utilities
 {
 
     enum Directions
