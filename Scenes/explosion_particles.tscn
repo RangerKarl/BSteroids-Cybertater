@@ -1,20 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://xwhekqsxaeuh"]
+[gd_scene load_steps=2 format=3 uid="uid://xwhekqsxaeuh"]
 
 [ext_resource type="Script" uid="uid://c48hwpboabfp7" path="res://Assets/Scripts/ExplosionParticles.cs" id="1_ahgu2"]
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bwcjq"]
-lifetime_randomness = 0.04
-particle_flag_disable_z = true
-spread = 180.0
-gravity = Vector3(0, 98, 0)
-
-[node name="ExplosionParticles" type="GPUParticles2D"]
-position = Vector2(-2, 0)
+[node name="ExplosionParticles" type="CPUParticles2D" node_paths=PackedStringArray("timer")]
+position = Vector2(-22, -1)
 emitting = false
-amount = 6
+amount = 32
 lifetime = 6.0
+one_shot = true
 explosiveness = 1.0
-process_material = SubResource("ParticleProcessMaterial_bwcjq")
+randomness = 0.02
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 127.92
+initial_velocity_max = 241.58
+radial_accel_max = 100.0
+angle_max = 180.0
+scale_amount_min = 3.0
+scale_amount_max = 3.0
 script = ExtResource("1_ahgu2")
+timer = NodePath("Timer")
 
 [node name="Timer" type="Timer" parent="."]

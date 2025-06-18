@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://juoy7p4lpfrp"]
+[gd_scene load_steps=7 format=3 uid="uid://juoy7p4lpfrp"]
 
 [ext_resource type="Texture2D" uid="uid://bcfbgdggw01cc" path="res://Assets/Textures/Player.png" id="1_53spr"]
 [ext_resource type="Script" uid="uid://dsb51pxv2xmib" path="res://Assets/Scripts/PlayerMovement.cs" id="1_clmic"]
 [ext_resource type="PackedScene" uid="uid://cipurhnfsh5jt" path="res://Scenes/screen_bounds_mvmnt.tscn" id="3_8jkra"]
+[ext_resource type="PackedScene" uid="uid://xwhekqsxaeuh" path="res://Scenes/explosion_particles.tscn" id="4_vgqql"]
+[ext_resource type="Script" uid="uid://cnplfbj8fgegx" path="res://Assets/Scripts/PlayerShooting.cs" id="5_x3wgy"]
+[ext_resource type="PackedScene" uid="uid://3xwf8asxe6ij" path="res://Scenes/bullet.tscn" id="6_3smsa"]
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 16
+collision_mask = 20
 script = ExtResource("1_clmic")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -18,3 +21,10 @@ polygon = PackedVector2Array(0, -32, 32, 32, 0, 16, -32, 32)
 
 [node name="ScreenBoundsMovement" parent="." node_paths=PackedStringArray("node") instance=ExtResource("3_8jkra")]
 node = NodePath("..")
+
+[node name="ExplosionParticles" parent="." instance=ExtResource("4_vgqql")]
+
+[node name="ShootingPoint" type="Node2D" parent="."]
+position = Vector2(0, 32)
+script = ExtResource("5_x3wgy")
+BulletScene = ExtResource("6_3smsa")
