@@ -7,17 +7,18 @@
 [ext_resource type="Script" uid="uid://cnplfbj8fgegx" path="res://Assets/Scripts/PlayerShooting.cs" id="5_x3wgy"]
 [ext_resource type="PackedScene" uid="uid://3xwf8asxe6ij" path="res://Scenes/bullet.tscn" id="6_3smsa"]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("explosion")]
 collision_mask = 20
 script = ExtResource("1_clmic")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 3.14159
-texture = ExtResource("1_53spr")
+explosion = NodePath("ExplosionParticles")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 rotation = 3.14159
 polygon = PackedVector2Array(0, -32, 32, 32, 0, 16, -32, 32)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.14159
+texture = ExtResource("1_53spr")
 
 [node name="ScreenBoundsMovement" parent="." node_paths=PackedStringArray("node") instance=ExtResource("3_8jkra")]
 node = NodePath("..")

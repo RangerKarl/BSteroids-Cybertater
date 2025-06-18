@@ -8,11 +8,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_tqh6u"]
 radius = 64.0
 
-[node name="Asteroid" type="Area2D"]
+[node name="Asteroid" type="Area2D" node_paths=PackedStringArray("explosion")]
 collision_layer = 4
-collision_mask = 27
+collision_mask = 3
 script = ExtResource("1_bi0dy")
 imagePaths = PackedStringArray("res://Assets/Textures/Asteroid_01.png", "res://Assets/Textures/Asteroid_02.png", "res://Assets/Textures/Asteroid_03.png", "res://Assets/Textures/Asteroid_04.png")
+explosion = NodePath("ExplosionParticles")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_tqh6u")
@@ -25,4 +26,5 @@ texture = ExtResource("4_xliy4")
 
 [node name="ExplosionParticles" parent="." instance=ExtResource("4_bi0dy")]
 
+[connection signal="area_entered" from="." to="." method="OnAreaEntered"]
 [connection signal="body_entered" from="." to="." method="OnBodyEntered"]

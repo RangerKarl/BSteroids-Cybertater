@@ -11,4 +11,9 @@ namespace BSteroids.Scripts.Utilities
     {
         BIG, MEDIUM, SMALL
     }
+
+    public enum BulletOwner
+    {
+        PLAYER, UFO
+    }
 }

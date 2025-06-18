@@ -12,6 +12,10 @@ namespace BSteroids.Scripts.Game
         [Export]
         float Speed = 50f;
 
+        [Export]
+
+        ExplosionParticles explosion;
+
         Vector2 Direction;
 
         internal AsteroidSizes Size = AsteroidSizes.BIG;
@@ -47,12 +51,40 @@ namespace BSteroids.Scripts.Game
 
         private void OnBodyEntered(Node2D node)
         {
-            //GD.Print("BODY ENTERED");
-            if (node is PlayerMovement)
+            GD.Print("ASTEROID BODY ENTERED");
+
+            if (node is PlayerMovement movement)
             {
-                // nuke the player
-                node.QueueFree();
+                movement.OnPlayerBodyEntered();
             }
+        }
+
+        private void OnAreaEntered(Area2D area)
+        {
+            GD.Print("ASTEROID BODY ENTERED");
+
+            //if (area is Bullet && ((Bullet)area).BulletOwner == BulletOwner.PLAYER)
+            //{
+            //    // nuke the asteroid!
+            //    EmitExplosion();
+            //    // destroy player
+            //    QueueFree();
+            //}
+        }
+
+        public void Explode()
+        {
+            // nuke the asteroid!
+            EmitExplosion();
+            // destroy player
+            QueueFree();
+        }
+        private void EmitExplosion()
+        {
+            // play explosion
+            explosion.Emitting = true;
+            // to keep explosion happening
+            explosion.Reparent(GetTree().Root);
         }
 
     }

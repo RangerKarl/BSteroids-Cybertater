@@ -14,6 +14,8 @@ namespace BSteroids.Scripts.Game
 
         float[] bounds = new float[4];
 
+        //public delegate void OnAsteroidDestroyedEventHandler(Area2D Asteroid);
+
         public override void _Ready()
         {
             // pick a random point on scene
