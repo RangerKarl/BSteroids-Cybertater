@@ -1,6 +1,6 @@
 using Godot;
 using System;
-using Bsteroids.Scripts.Utilities;
+using BSteroids.Scripts.Utilities;
 
 namespace BSteroids.Scripts.Game
 {

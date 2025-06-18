@@ -5,16 +5,16 @@ namespace BSteroids.Scripts.Game
     public partial class PlayerMovement : CharacterBody2D
     {
         [Export]
-        public float MaxSpeed = 10;
+        float MaxSpeed = 10;
 
         [Export]
-        public double RotationSpeed = 3.5;
+        double RotationSpeed = 3.5;
 
         [Export]
-        public double VelocityDampingFactor = 0.5;
+        double VelocityDampingFactor = 0.5;
 
         [Export]
-        public double LinearVelocity = 200;
+        double LinearVelocity = 200;
 
 
         [Export]
@@ -49,8 +49,8 @@ namespace BSteroids.Scripts.Game
         // calculate before every phys-step. Fixed time intervals
         public override void _PhysicsProcess(double delta)
         {
-            //// use the previously retrieved rotation to rotate our sprite!
-            Rotation += (float)(RotationDirection * RotationSpeed * delta);
+            // use the previously retrieved rotation to rotate our sprite!
+            Rotation = Rotation + (float)(RotationDirection * RotationSpeed * delta);
 
             if (InputVector.Y > 0)
                 AccelerateForward(delta);
