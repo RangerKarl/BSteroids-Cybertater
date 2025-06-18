@@ -29,6 +29,7 @@ namespace BSteroids.Scripts.Game {
             if (area is Asteroid asteroid)
             {
                 asteroid.Explode();
+                QueueFree(); // kill the bullet on asteroid hit
             }
         }
     }

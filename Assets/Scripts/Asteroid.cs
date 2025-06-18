@@ -6,8 +6,10 @@ namespace BSteroids.Scripts.Game
 {
     public partial class Asteroid : Area2D
     {
-        [Export]
-        string[] imagePaths = new string[4];
+        string[] imagePaths = { "res://Assets/Textures/Asteroid_01.png",
+                                "res://Assets/Textures/Asteroid_02.png",
+                                "res://Assets/Textures/Asteroid_03.png",
+                                "res://Assets/Textures/Asteroid_04.png"};
 
         [Export]
         float Speed = 50f;
@@ -28,23 +30,43 @@ namespace BSteroids.Scripts.Game
             GD.Print("Asteroid spawn");
             // scale value depend on size
 
-            var scaleValue = 1 / ((int)Size + 1);
+            var scaleValue = (float)1 / ((int)Size + 1);
 
             Scale = new Vector2(scaleValue, scaleValue);
 
+            if (0.1 < scaleValue && scaleValue < 0.5)
+            {
+                var collision = (CollisionShape2D)this.GetNode("./CollisionShape2D");
+                var collisionShape = collision.Shape as CircleShape2D;
+                var newCollisionShape = new CircleShape2D();
+                newCollisionShape.Radius = collisionShape.Radius * scaleValue;
+                collision.Shape = newCollisionShape;
+            }
+
+
             Random rnd = new Random();
-            var x = rnd.Next(-1, 1);
-            var y = rnd.Next(-1, 1);
-            Direction = new Vector2(x, y);
+            SetDirection(rnd);
 
             // update the Sprite2D with a random asset from the image paths
 
-            sprite = (Sprite2D)this.GetNode("./Sprite2D");
-            var img = (Texture2D)GD.Load(imagePaths[rnd.Next(0, imagePaths.Length -1)]);
-            sprite.Texture = img;
+            ApplySpriteFromSheet(rnd);
 
             explosion = (ExplosionParticles)this.GetNode("./ExplosionParticles");
 
+        }
+
+        private void ApplySpriteFromSheet(Random rnd)
+        {
+            sprite = (Sprite2D)this.GetNode("./Sprite2D");
+            var img = (Texture2D)GD.Load(imagePaths[rnd.Next(0, imagePaths.Length - 1)]);
+            sprite.Texture = img;
+        }
+
+        private void SetDirection(Random rnd)
+        {
+            var x = rnd.Next(-1, 1);
+            var y = rnd.Next(-1, 1);
+            Direction = new Vector2(x, y);
         }
 
         public override void _Process(double delta)

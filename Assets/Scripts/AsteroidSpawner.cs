@@ -41,6 +41,17 @@ namespace BSteroids.Scripts.Game
         private void AsteroidDestroyed(AsteroidSizes size, Vector2 position)
         {
             GD.Print($"AsteroidSpawner hears asteroid of size {size.ToString()} destroyed");
+
+            // spawn 3 every time destroyed
+            for (int i = 0; i < 2; i++)
+            {
+                if (size != AsteroidSizes.SMALL)
+                {
+                    SpawnAsteroid(size + 1, position);
+                }
+            }
+
+
         }
 
         private Vector2 GetRandomPositionFromScreenRect()
