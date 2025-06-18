@@ -14,8 +14,6 @@ namespace BSteroids.Scripts.Game
 
         float[] bounds = new float[4];
 
-        //public delegate void OnAsteroidDestroyedEventHandler(Area2D Asteroid);
-
         public override void _Ready()
         {
             // pick a random point on scene
@@ -27,6 +25,8 @@ namespace BSteroids.Scripts.Game
             }
         }
 
+
+
         private void SpawnAsteroid(AsteroidSizes size, Vector2 position)
         {
             var asteroid = (Asteroid)AsteroidScene.Instantiate();
@@ -35,6 +35,12 @@ namespace BSteroids.Scripts.Game
             GetTree().Root.CallDeferred(Node.MethodName.AddChild, asteroid);
             asteroid.GlobalPosition = position;
             asteroid.Size = size;
+            asteroid.AsteroidIsDestroyed += AsteroidDestroyed;
+        }
+
+        private void AsteroidDestroyed(AsteroidSizes size, Vector2 position)
+        {
+            GD.Print($"AsteroidSpawner hears asteroid of size {size.ToString()} destroyed");
         }
 
         private Vector2 GetRandomPositionFromScreenRect()

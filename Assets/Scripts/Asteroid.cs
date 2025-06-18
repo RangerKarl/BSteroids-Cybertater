@@ -12,8 +12,6 @@ namespace BSteroids.Scripts.Game
         [Export]
         float Speed = 50f;
 
-        [Export]
-
         ExplosionParticles explosion;
 
         Vector2 Direction;
@@ -21,6 +19,9 @@ namespace BSteroids.Scripts.Game
         internal AsteroidSizes Size = AsteroidSizes.BIG;
         
         Sprite2D sprite;
+
+        [Signal]
+        public delegate void AsteroidIsDestroyedEventHandler(AsteroidSizes size, Vector2 position);
 
         public override void _Ready()
         {
@@ -42,6 +43,8 @@ namespace BSteroids.Scripts.Game
             var img = (Texture2D)GD.Load(imagePaths[rnd.Next(0, imagePaths.Length -1)]);
             sprite.Texture = img;
 
+            explosion = (ExplosionParticles)this.GetNode("./ExplosionParticles");
+
         }
 
         public override void _Process(double delta)
@@ -59,9 +62,21 @@ namespace BSteroids.Scripts.Game
             }
         }
 
+
+        public void Explode()
+        {
+            //AsteroidData data = new AsteroidData { Position = this.Position, Size = this.Size  };
+
+            // nuke the asteroid!
+            EmitExplosion();
+            // destroy player
+            QueueFree();
+
+            EmitSignal(SignalName.AsteroidIsDestroyed, (int)Size, Position);
+        }
         private void OnAreaEntered(Area2D area)
         {
-            GD.Print("ASTEROID BODY ENTERED");
+            //GD.Print("ASTEROID BODY ENTERED");
 
             //if (area is Bullet && ((Bullet)area).BulletOwner == BulletOwner.PLAYER)
             //{
@@ -72,13 +87,6 @@ namespace BSteroids.Scripts.Game
             //}
         }
 
-        public void Explode()
-        {
-            // nuke the asteroid!
-            EmitExplosion();
-            // destroy player
-            QueueFree();
-        }
         private void EmitExplosion()
         {
             // play explosion
