@@ -5,6 +5,9 @@ namespace BSteroids.Scripts.Game
     public partial class PlayerMovement : CharacterBody2D
     {
         [Export]
+        ExplosionParticles explosion;
+
+        [Export]
         float MaxSpeed = 10;
 
         [Export]
@@ -57,7 +60,24 @@ namespace BSteroids.Scripts.Game
             else if (-0.01 <= InputVector.Y && InputVector.Y <= 0.01 && Velocity != Vector2.Zero)
                 SlowDownAndStop(delta);
 
-            MoveAndCollide(localVelocity * (float)delta);
+            var collisions = MoveAndCollide(localVelocity * (float)delta);
+
+        }
+
+        /// <summary>
+        /// Stuff that happens to my player when I enter. 
+        /// </summary>
+        public void OnPlayerBodyEntered()
+        {
+            GD.Print("BODY ENTERED");
+
+            // play explosion
+            explosion.Emitting = true;
+            // to keep explosion happening
+            explosion.Reparent(GetTree().Root);
+
+            // destroy player
+            QueueFree();
         }
 
         private void AccelerateForward(double delta)

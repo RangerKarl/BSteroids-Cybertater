@@ -1,4 +1,6 @@
 ﻿
+using System.Numerics;
+
 namespace BSteroids.Scripts.Utilities
 {
 
@@ -7,8 +9,14 @@ namespace BSteroids.Scripts.Utilities
         Top = 0, Bottom, Left, Right
     }
 
-    enum AsteroidSizes
+    public enum AsteroidSizes
     {
         BIG, MEDIUM, SMALL
     }
+
+    public enum BulletOwner
+    {
+        PLAYER, UFO
+    }
+
 }
