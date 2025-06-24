@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://juoy7p4lpfrp"]
+[gd_scene load_steps=8 format=3 uid="uid://juoy7p4lpfrp"]
 
 [ext_resource type="Texture2D" uid="uid://bcfbgdggw01cc" path="res://Assets/Textures/Player.png" id="1_53spr"]
 [ext_resource type="Script" uid="uid://dsb51pxv2xmib" path="res://Assets/Scripts/PlayerMovement.cs" id="1_clmic"]
@@ -6,11 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://xwhekqsxaeuh" path="res://Scenes/explosion_particles.tscn" id="4_vgqql"]
 [ext_resource type="Script" uid="uid://cnplfbj8fgegx" path="res://Assets/Scripts/PlayerShooting.cs" id="5_x3wgy"]
 [ext_resource type="PackedScene" uid="uid://3xwf8asxe6ij" path="res://Scenes/bullet.tscn" id="6_3smsa"]
+[ext_resource type="Script" uid="uid://t3c6ybu8073n" path="res://Assets/Scripts/Utilities/VeloVector.cs" id="7_3smsa"]
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("explosion")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("explosion", "velVector")]
 collision_mask = 20
 script = ExtResource("1_clmic")
 explosion = NodePath("ExplosionParticles")
+velVector = NodePath("Line2D")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 rotation = 3.14159
@@ -29,3 +31,10 @@ node = NodePath("..")
 position = Vector2(0, 32)
 script = ExtResource("5_x3wgy")
 BulletScene = ExtResource("6_3smsa")
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(0, -1)
+points = PackedVector2Array(0, 0, 0, 0, -1, 31, 0, 136)
+width = 5.0
+default_color = Color(1, 0, 0, 1)
+script = ExtResource("7_3smsa")
