@@ -1,6 +1,7 @@
 using BSteroids.Scripts.Utilities;
 using Godot;
 using System;
+using System.Diagnostics;
 
 namespace BSteroids.Scripts.Game
 {
@@ -27,7 +28,6 @@ namespace BSteroids.Scripts.Game
 
         public override void _Ready()
         {
-            GD.Print("Asteroid spawn");
             // scale value depend on size
 
             var scaleValue = (float)1 / ((int)Size + 1);
@@ -36,11 +36,7 @@ namespace BSteroids.Scripts.Game
 
             if (0.1 < scaleValue && scaleValue < 0.5)
             {
-                var collision = (CollisionShape2D)this.GetNode("./CollisionShape2D");
-                var collisionShape = collision.Shape as CircleShape2D;
-                var newCollisionShape = new CircleShape2D();
-                newCollisionShape.Radius = collisionShape.Radius * scaleValue;
-                collision.Shape = newCollisionShape;
+                MutateCollision(scaleValue);
             }
 
 
@@ -53,6 +49,15 @@ namespace BSteroids.Scripts.Game
 
             explosion = (ExplosionParticles)this.GetNode("./ExplosionParticles");
 
+        }
+
+        private void MutateCollision(float scaleValue)
+        {
+            var collision = (CollisionShape2D)this.GetNode("./CollisionShape2D");
+            var collisionShape = collision.Shape as CircleShape2D;
+            var newCollisionShape = new CircleShape2D();
+            if (collisionShape != null) newCollisionShape.Radius = collisionShape.Radius * scaleValue;
+            collision.Shape = newCollisionShape;
         }
 
         private void ApplySpriteFromSheet(Random rnd)
@@ -76,7 +81,7 @@ namespace BSteroids.Scripts.Game
 
         private void OnBodyEntered(Node2D node)
         {
-            GD.Print("ASTEROID BODY ENTERED");
+            // GD.Print("ASTEROID BODY ENTERED");
 
             if (node is PlayerMovement movement)
             {

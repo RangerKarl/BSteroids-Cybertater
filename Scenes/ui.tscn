@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfovwmgtdhktp"]
+
+[ext_resource type="LabelSettings" uid="uid://c0r8wl4i1w6yb" path="res://Scenes/ui_font.tres" id="1_jxero"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+
+[node name="LabelContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="PointsLabel" type="Label" parent="MarginContainer/LabelContainer"]
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("1_jxero")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 16
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="GameOverlabel" type="Label" parent="MarginContainer/CenterContainer"]
+visible = false
+layout_mode = 2
+text = "Game Over"
+label_settings = ExtResource("1_jxero")
