@@ -1,7 +1,6 @@
 using BSteroids.Scripts.Utilities;
 using Godot;
 using System;
-using System.Diagnostics;
 
 namespace BSteroids.Scripts.Game
 {
