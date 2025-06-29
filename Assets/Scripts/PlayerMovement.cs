@@ -30,6 +30,9 @@ namespace BSteroids.Scripts.Game
         [Export]
         Line2D velVector;
 
+        [Signal]
+        public delegate void PlayerDeathEventHandler();
+
 
         // Called when the node enters the scene tree for the first time.
         public override void _Ready()
@@ -39,7 +42,7 @@ namespace BSteroids.Scripts.Game
             
             // velocity vector related items
             if (velVector is null)
-                velVector = GetNode<VeloVector>("./Line2D");
+                velVector = GetNode<VeloVector>("./VelocityVector");
             velVector.Scale *= 1;
         }
 
@@ -87,8 +90,8 @@ namespace BSteroids.Scripts.Game
         /// </summary>
         public void OnPlayerBodyEntered()
         {
-            GD.Print("BODY ENTERED");
-
+            EmitSignalPlayerDeath();
+            
             // play explosion
             explosion.Emitting = true;
             // to keep explosion happening
