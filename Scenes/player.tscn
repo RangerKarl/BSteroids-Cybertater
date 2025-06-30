@@ -12,7 +12,7 @@
 collision_mask = 20
 script = ExtResource("1_clmic")
 explosion = NodePath("ExplosionParticles")
-velVector = NodePath("Line2D")
+velVector = NodePath("VelocityVector")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 rotation = 3.14159
@@ -32,7 +32,7 @@ position = Vector2(0, 32)
 script = ExtResource("5_x3wgy")
 BulletScene = ExtResource("6_3smsa")
 
-[node name="Line2D" type="Line2D" parent="."]
+[node name="VelocityVector" type="Line2D" parent="."]
 position = Vector2(0, -1)
 points = PackedVector2Array(0, 0, 0, 0, -1, 31, 0, 136)
 width = 5.0
