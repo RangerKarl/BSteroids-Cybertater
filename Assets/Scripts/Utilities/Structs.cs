@@ -1,7 +1,4 @@
-﻿
-using System.Numerics;
-
-namespace BSteroids.Scripts.Utilities
+﻿namespace BSteroids.Scripts.Utilities
 {
 
     enum Directions

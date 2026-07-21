@@ -68,8 +68,8 @@ namespace BSteroids.Scripts.Game
             bounds[(int)Directions.Left] = (cameraPosition.X - size.X) / 2;
             bounds[(int)Directions.Right] = (cameraPosition.X + size.X) / 2;
 
-            var x = rng.NextDouble() * Double.Abs(bounds[(int)Directions.Left] - bounds[(int)Directions.Right]);
-            var y = rng.NextDouble() * Double.Abs(bounds[(int)Directions.Top] - bounds[(int)Directions.Bottom]);
+            var x = bounds[(int)Directions.Left] + rng.NextDouble() * (bounds[(int)Directions.Right] - bounds[(int)Directions.Left]);
+            var y = bounds[(int)Directions.Top] + rng.NextDouble() * (bounds[(int)Directions.Bottom] - bounds[(int)Directions.Top]);
 
             return new Vector2((float)x, (float)y);
         }

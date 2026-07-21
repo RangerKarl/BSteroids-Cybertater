@@ -14,8 +14,6 @@ namespace BSteroids.Scripts.Game {
             
         public Vector2 Direction;
 
-        Timer timer;
-
         public override void _Process(double delta)
         {
             Position = Position + (Direction * BulletSpeed * (float)delta);            
