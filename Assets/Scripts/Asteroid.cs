@@ -62,14 +62,14 @@ namespace BSteroids.Scripts.Game
         private void ApplySpriteFromSheet(Random rnd)
         {
             sprite = (Sprite2D)this.GetNode("./Sprite2D");
-            var img = (Texture2D)GD.Load(imagePaths[rnd.Next(0, imagePaths.Length - 1)]);
+            var img = (Texture2D)GD.Load(imagePaths[rnd.Next(0, imagePaths.Length)]);
             sprite.Texture = img;
         }
 
         private void SetDirection(Random rnd)
         {
-            var x = rnd.Next(-1, 1);
-            var y = rnd.Next(-1, 1);
+            var x = rnd.Next(-1, 2);
+            var y = rnd.Next(-1, 2);
             Direction = new Vector2(x, y);
         }
 

@@ -40,7 +40,6 @@ namespace BSteroids.Scripts.Game
             // velocity vector related items
             if (velVector is null)
                 velVector = GetNode<VeloVector>("./Line2D");
-            velVector.Scale *= 1;
         }
 
         // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -114,10 +113,10 @@ namespace BSteroids.Scripts.Game
         private void SlowDownAndStop(double delta)
         {
 
-            localVelocity.Lerp(Vector2.Zero, (float)(VelocityDampingFactor * delta));
+            localVelocity = localVelocity.Lerp(Vector2.Zero, (float)(VelocityDampingFactor * delta));
 
             // stop with a deadzone
-            if (-0.1 <= Velocity.Y && Velocity.Y <= 0.1)
+            if (-0.1 <= localVelocity.Y && localVelocity.Y <= 0.1)
             {
                 localVelocity.X = 0;
             }
